@@ -1,4 +1,4 @@
-package io.ermdev.ermtv.entity;
+package io.ermdev.ermtv.data.entity;
 
 import javax.persistence.*;
 
