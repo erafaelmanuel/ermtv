@@ -10,4 +10,5 @@ public class Bookmark {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Item item;
+    private User user;
 }
