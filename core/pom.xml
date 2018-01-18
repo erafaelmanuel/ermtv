@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>io.ermdev.ermtv</groupId>
-            <artifactId>data</artifactId>
+            <artifactId>rest</artifactId>
         </dependency>
     </dependencies>
 
