@@ -11,5 +11,10 @@
 
     <artifactId>rest</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>io.ermdev.ermtv</groupId>
+            <artifactId>data</artifactId>
+        </dependency>
+    </dependencies>
 </project>
