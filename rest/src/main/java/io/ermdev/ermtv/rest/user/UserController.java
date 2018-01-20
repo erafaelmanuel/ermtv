@@ -3,10 +3,7 @@ package io.ermdev.ermtv.rest.user;
 import io.ermdev.ermtv.data.entity.User;
 import io.ermdev.ermtv.data.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,5 +26,20 @@ public class UserController {
     @GetMapping("all")
     public List<User> getAll() {
         return userRepository.findAll();
+    }
+
+    @PostMapping
+    public User add(@RequestBody User user) {
+        return userRepository.save(user);
+    }
+
+    @PutMapping
+    public User update(@RequestBody User user) {
+        return userRepository.save(user);
+    }
+
+    @DeleteMapping
+    public User delete(@RequestBody User user) {
+        return userRepository.save(user);
     }
 }
