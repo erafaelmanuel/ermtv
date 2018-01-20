@@ -10,7 +10,7 @@ import java.util.List;
 public interface ItemRepository extends JpaRepository<Item, Long> {
 
     @Query("from Item where id=:itemId")
-    Item findById(@Param("userId") Long itemId);
+    Item findById(@Param("itemId") Long itemId);
 
     @Query("from Item")
     List<Item> findAll();
