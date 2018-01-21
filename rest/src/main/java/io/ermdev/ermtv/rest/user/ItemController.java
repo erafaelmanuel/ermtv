@@ -3,10 +3,9 @@ package io.ermdev.ermtv.rest.user;
 import io.ermdev.ermtv.data.entity.Item;
 import io.ermdev.ermtv.data.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("item")
@@ -22,5 +21,26 @@ public class ItemController {
     @GetMapping("{itemId}")
     Item getById(@PathVariable("itemId") Long itemId) {
         return itemRepository.findById(itemId);
+    }
+
+    @GetMapping("all")
+    List<Item> getAll() {
+        return itemRepository.findAll();
+    }
+
+    @PostMapping
+    public Item add(@RequestBody Item item) {
+        return itemRepository.save(item);
+    }
+
+    @PutMapping
+    public Item update(@RequestBody Item item) {
+        return itemRepository.save(item);
+    }
+
+    @DeleteMapping
+    public Item delete(@RequestBody Item item) {
+        itemRepository.delete(item);
+        return item;
     }
 }
