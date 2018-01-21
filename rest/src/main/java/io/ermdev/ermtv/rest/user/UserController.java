@@ -40,6 +40,7 @@ public class UserController {
 
     @DeleteMapping
     public User delete(@RequestBody User user) {
-        return userRepository.delete(user);
+        userRepository.delete(user);
+        return user;
     }
 }
